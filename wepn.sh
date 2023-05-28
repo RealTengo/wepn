@@ -282,6 +282,12 @@ check_os(){
           print center "[bold][red]This script has not been tested on\n [bold][yellow]$os $os_version [bold][red]yet!"
           fn_menu_4
       fi
+   if [[ "$os" == "Amazon Linux" ]]; then
+      if ! [[ "$os_version" == "2" ]]; then
+          echo
+          print center "[bold][red]This script has not been tested on\n [bold][yellow]$os $os_version [bold][red]yet!"
+          fn_menu_4
+      fi
   elif [[ "$os" == "Debian" ]]; then
       if ! [[ "$os_version" == "10" || "$os_version" == "11" ]]; then
           echo
